@@ -25,6 +25,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
 @property (assign, nonatomic, readonly) GLuint aPosition;
 
 // Uniform Handles
+@property (assign, nonatomic, readonly) GLuint uProjectionMatrix;
 @property (assign, nonatomic, readonly) GLuint uResolution;
 @property (assign, nonatomic, readonly) GLuint uTime;
 
@@ -51,6 +52,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
     _aPosition = glGetAttribLocation(_program, "aPosition");
     
     // Uniforms
+    _uProjectionMatrix = glGetUniformLocation(_program, "uProjectionMatrix");
     _uResolution = glGetUniformLocation(_program, "uResolution");
     _uTime = glGetUniformLocation(_program, "uTime");
     
@@ -64,7 +66,16 @@ static GLfloat const RWTBaseShaderQuad[8] =
 #pragma mark - Render
 - (void)renderInRect:(CGRect)rect atTime:(NSTimeInterval)time
 {
+  // Projection Matrix
+  GLKMatrix4 projectionMatrix = GLKMatrix4Identity;
+  if (CGRectGetHeight(rect)>=CGRectGetWidth(rect)) {
+    projectionMatrix = GLKMatrix4Scale(projectionMatrix, 1.f, CGRectGetHeight(rect)/CGRectGetWidth(rect), 1.f);
+  } else {
+    projectionMatrix = GLKMatrix4Scale(projectionMatrix, 1.f, CGRectGetWidth(rect)/CGRectGetHeight(rect), 1.f);
+  }
+  
   // Uniforms
+  glUniformMatrix4fv(self.uProjectionMatrix, 1, 0, projectionMatrix.m);
   glUniform2f(self.uResolution, CGRectGetWidth(rect)*2.f, CGRectGetHeight(rect)*2.f);
   glUniform1f(self.uTime, time);
   

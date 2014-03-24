@@ -13,7 +13,6 @@ precision highp float;
 
 // Uniforms
 uniform vec2 uResolution;
-uniform float uTime;
 
 void main(void)
 {

@@ -34,7 +34,7 @@
   glClearColor(1.f, 0.f, 0.f, 1.f);
   
   // Initialize shader
-  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTGradient"];
+  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTSphere"];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
