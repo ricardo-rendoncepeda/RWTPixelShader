@@ -33,7 +33,7 @@
   glClearColor(1.f, 0.f, 0.f, 1.f);
   
   // Initialize shader
-  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTNoise"];
+  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTMoon"];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {

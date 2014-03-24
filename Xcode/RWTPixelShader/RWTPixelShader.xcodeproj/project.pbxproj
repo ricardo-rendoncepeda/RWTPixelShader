@@ -29,6 +29,7 @@
 		8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */; };
 		8036D84018DFCBBD00D90FF5 /* RWTSphere.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */; };
 		8036D84218DFCFD500D90FF5 /* RWTNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */; };
+		8036D84418DFD45300D90FF5 /* RWTMoon.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTGradient.fsh; path = Shaders/RWTGradient.fsh; sourceTree = "<group>"; };
 		8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTSphere.fsh; path = Shaders/RWTSphere.fsh; sourceTree = "<group>"; };
 		8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTNoise.fsh; path = Shaders/RWTNoise.fsh; sourceTree = "<group>"; };
+		8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = RWTMoon.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */,
 				8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */,
 				8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */,
+				8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
 			path = RWTPixelShader;
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D84418DFD45300D90FF5 /* RWTMoon.fsh in Resources */,
 				8036D84218DFCFD500D90FF5 /* RWTNoise.fsh in Resources */,
 				8036D84018DFCBBD00D90FF5 /* RWTSphere.fsh in Resources */,
 				8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */,
