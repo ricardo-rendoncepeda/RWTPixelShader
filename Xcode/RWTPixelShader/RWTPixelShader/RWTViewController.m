@@ -18,8 +18,7 @@
 
 @implementation RWTViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
   [super viewDidLoad];
   
   // Set up context
@@ -37,15 +36,13 @@
   self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTSphere"];
 }
 
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
-{
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
   glClear(GL_COLOR_BUFFER_BIT);
   
   [self.shader renderInRect:rect atTime:self.timeSinceFirstResume];
 }
 
-- (BOOL)prefersStatusBarHidden
-{
+- (BOOL)prefersStatusBarHidden {
   return YES;
 }
 

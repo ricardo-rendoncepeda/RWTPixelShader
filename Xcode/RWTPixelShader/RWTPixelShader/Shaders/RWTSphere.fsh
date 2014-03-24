@@ -16,13 +16,13 @@ uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
 uniform float uTime;
 
-void main(void)
-{
+void main(void) {
   vec2 position = gl_FragCoord.xy/uResolution - vec2(.5, .5);
   position = vec2(uProjectionMatrix * vec4(position, 0.0, 1.0));
   
-  if(length(position) > .5)
+  if (length(position) > .5) {
     discard;
+  }
   
   float r = .5;
   float x = position.x;

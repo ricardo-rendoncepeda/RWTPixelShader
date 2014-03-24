@@ -8,8 +8,7 @@
 
 #import "RWTBaseShader.h"
 
-static GLfloat const RWTBaseShaderQuad[8] =
-{
+static GLfloat const RWTBaseShaderQuad[8] = {
   -1.f, -1.f,
   -1.f, +1.f,
   +1.f, -1.f,
@@ -34,8 +33,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
 @implementation RWTBaseShader
 
 #pragma mark - Lifecycle
-- (instancetype)initWithVertexShader:(NSString *)vsh fragmentShader:(NSString *)fsh
-{
+- (instancetype)initWithVertexShader:(NSString *)vsh fragmentShader:(NSString *)fsh {
   self = [super init];
   if (self) {
     if (!vsh) {
@@ -64,8 +62,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
 
 #pragma mark - Public
 #pragma mark - Render
-- (void)renderInRect:(CGRect)rect atTime:(NSTimeInterval)time
-{
+- (void)renderInRect:(CGRect)rect atTime:(NSTimeInterval)time {
   // Projection Matrix
   GLKMatrix4 projectionMatrix = GLKMatrix4Identity;
   if (CGRectGetHeight(rect)>=CGRectGetWidth(rect)) {
@@ -85,8 +82,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
 
 #pragma mark - Private
 #pragma mark - Configurations
-- (void)configureOpenGLES
-{
+- (void)configureOpenGLES {
   // Program
   glUseProgram(_program);
   
@@ -96,8 +92,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
 }
 
 #pragma mark - Compile & Link
-- (GLuint)programWithVertexShader:(NSString*)vsh fragmentShader:(NSString*)fsh
-{
+- (GLuint)programWithVertexShader:(NSString*)vsh fragmentShader:(NSString*)fsh {
   // Build shaders
   GLuint vertexShader = [self shaderWithName:vsh type:GL_VERTEX_SHADER];
   GLuint fragmentShader = [self shaderWithName:fsh type:GL_FRAGMENT_SHADER];
@@ -128,8 +123,7 @@ static GLfloat const RWTBaseShaderQuad[8] =
   return programHandle;
 }
 
-- (GLuint)shaderWithName:(NSString*)name type:(GLenum)type
-{
+- (GLuint)shaderWithName:(NSString*)name type:(GLenum)type {
   // Load the shader file
   NSString* file;
   if (type == GL_VERTEX_SHADER) {
