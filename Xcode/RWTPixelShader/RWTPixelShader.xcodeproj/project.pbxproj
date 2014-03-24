@@ -19,6 +19,9 @@
 		8036D81918DFB30100D90FF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D80118DFB30000D90FF5 /* UIKit.framework */; };
 		8036D82118DFB30100D90FF5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8036D81F18DFB30100D90FF5 /* InfoPlist.strings */; };
 		8036D82318DFB30100D90FF5 /* RWTPixelShaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D82218DFB30100D90FF5 /* RWTPixelShaderTests.m */; };
+		8036D82D18DFB35C00D90FF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8036D82C18DFB35C00D90FF5 /* Main.storyboard */; };
+		8036D82F18DFB38E00D90FF5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */; };
+		8036D83118DFB39300D90FF5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D83018DFB39300D90FF5 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		8036D81E18DFB30100D90FF5 /* RWTPixelShaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RWTPixelShaderTests-Info.plist"; sourceTree = "<group>"; };
 		8036D82018DFB30100D90FF5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8036D82218DFB30100D90FF5 /* RWTPixelShaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTPixelShaderTests.m; sourceTree = "<group>"; };
+		8036D82C18DFB35C00D90FF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8036D83018DFB39300D90FF5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D83118DFB39300D90FF5 /* GLKit.framework in Frameworks */,
+				8036D82F18DFB38E00D90FF5 /* OpenGLES.framework in Frameworks */,
 				8036D80018DFB30000D90FF5 /* CoreGraphics.framework in Frameworks */,
 				8036D80218DFB30000D90FF5 /* UIKit.framework in Frameworks */,
 				8036D7FE18DFB30000D90FF5 /* Foundation.framework in Frameworks */,
@@ -96,6 +104,8 @@
 		8036D7FC18DFB30000D90FF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8036D83018DFB39300D90FF5 /* GLKit.framework */,
+				8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */,
 				8036D7FD18DFB30000D90FF5 /* Foundation.framework */,
 				8036D7FF18DFB30000D90FF5 /* CoreGraphics.framework */,
 				8036D80118DFB30000D90FF5 /* UIKit.framework */,
@@ -109,6 +119,7 @@
 			children = (
 				8036D80C18DFB30000D90FF5 /* RWTAppDelegate.h */,
 				8036D80D18DFB30000D90FF5 /* RWTAppDelegate.m */,
+				8036D82C18DFB35C00D90FF5 /* Main.storyboard */,
 				8036D80F18DFB30100D90FF5 /* Images.xcassets */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D82D18DFB35C00D90FF5 /* Main.storyboard in Resources */,
 				8036D80818DFB30000D90FF5 /* InfoPlist.strings in Resources */,
 				8036D81018DFB30100D90FF5 /* Images.xcassets in Resources */,
 			);
