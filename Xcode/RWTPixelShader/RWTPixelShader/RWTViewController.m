@@ -34,7 +34,7 @@
   glClearColor(1.f, 0.f, 0.f, 1.f);
   
   // Initialize shader
-  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTBase"];
+  self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTGradient"];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -42,6 +42,11 @@
   glClear(GL_COLOR_BUFFER_BIT);
   
   [self.shader renderInRect:rect atTime:self.timeSinceFirstResume];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+  return YES;
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  RWTBase.fsh
+//  RWTGradient.fsh
 //  RWTPixelShader
 //
 //  Created by Ricardo on 3/23/14.
@@ -17,5 +17,9 @@ uniform float uTime;
 
 void main(void)
 {
-  gl_FragColor = vec4(0., 1., 0., 1.);
+  vec2 position = gl_FragCoord.xy/uResolution;
+  
+  float brightness = (position.x+position.y)/2.;
+  
+  gl_FragColor = vec4(vec3(brightness), 1.);
 }

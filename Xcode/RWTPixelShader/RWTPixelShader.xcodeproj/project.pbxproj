@@ -26,6 +26,7 @@
 		8036D83718DFB9A200D90FF5 /* RWTBaseShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */; };
 		8036D83918DFBE8C00D90FF5 /* RWTBase.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83818DFBE7100D90FF5 /* RWTBase.vsh */; };
 		8036D83B18DFBEB000D90FF5 /* RWTBase.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */; };
+		8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTBaseShader.m; sourceTree = "<group>"; };
 		8036D83818DFBE7100D90FF5 /* RWTBase.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTBase.vsh; path = Shaders/RWTBase.vsh; sourceTree = "<group>"; };
 		8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTBase.fsh; path = Shaders/RWTBase.fsh; sourceTree = "<group>"; };
+		8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTGradient.fsh; path = Shaders/RWTGradient.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */,
 				8036D83818DFBE7100D90FF5 /* RWTBase.vsh */,
 				8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */,
+				8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
 			path = RWTPixelShader;
@@ -247,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */,
 				8036D83B18DFBEB000D90FF5 /* RWTBase.fsh in Resources */,
 				8036D83918DFBE8C00D90FF5 /* RWTBase.vsh in Resources */,
 				8036D82D18DFB35C00D90FF5 /* Main.storyboard in Resources */,
