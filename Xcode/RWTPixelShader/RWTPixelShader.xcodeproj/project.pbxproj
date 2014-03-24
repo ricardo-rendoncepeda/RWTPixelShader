@@ -22,6 +22,7 @@
 		8036D82D18DFB35C00D90FF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8036D82C18DFB35C00D90FF5 /* Main.storyboard */; };
 		8036D82F18DFB38E00D90FF5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */; };
 		8036D83118DFB39300D90FF5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D83018DFB39300D90FF5 /* GLKit.framework */; };
+		8036D83418DFB51C00D90FF5 /* RWTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D83318DFB51C00D90FF5 /* RWTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		8036D82C18DFB35C00D90FF5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		8036D83018DFB39300D90FF5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8036D83218DFB51C00D90FF5 /* RWTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTViewController.h; sourceTree = "<group>"; };
+		8036D83318DFB51C00D90FF5 /* RWTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				8036D80D18DFB30000D90FF5 /* RWTAppDelegate.m */,
 				8036D82C18DFB35C00D90FF5 /* Main.storyboard */,
 				8036D80F18DFB30100D90FF5 /* Images.xcassets */,
+				8036D83218DFB51C00D90FF5 /* RWTViewController.h */,
+				8036D83318DFB51C00D90FF5 /* RWTViewController.m */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
 			path = RWTPixelShader;
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D83418DFB51C00D90FF5 /* RWTViewController.m in Sources */,
 				8036D80E18DFB30000D90FF5 /* RWTAppDelegate.m in Sources */,
 				8036D80A18DFB30000D90FF5 /* main.m in Sources */,
 			);
