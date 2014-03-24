@@ -23,6 +23,9 @@
 		8036D82F18DFB38E00D90FF5 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D82E18DFB38E00D90FF5 /* OpenGLES.framework */; };
 		8036D83118DFB39300D90FF5 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D83018DFB39300D90FF5 /* GLKit.framework */; };
 		8036D83418DFB51C00D90FF5 /* RWTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D83318DFB51C00D90FF5 /* RWTViewController.m */; };
+		8036D83718DFB9A200D90FF5 /* RWTBaseShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */; };
+		8036D83918DFBE8C00D90FF5 /* RWTBase.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83818DFBE7100D90FF5 /* RWTBase.vsh */; };
+		8036D83B18DFBEB000D90FF5 /* RWTBase.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,10 @@
 		8036D83018DFB39300D90FF5 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		8036D83218DFB51C00D90FF5 /* RWTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTViewController.h; sourceTree = "<group>"; };
 		8036D83318DFB51C00D90FF5 /* RWTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTViewController.m; sourceTree = "<group>"; };
+		8036D83518DFB9A200D90FF5 /* RWTBaseShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTBaseShader.h; sourceTree = "<group>"; };
+		8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTBaseShader.m; sourceTree = "<group>"; };
+		8036D83818DFBE7100D90FF5 /* RWTBase.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTBase.vsh; path = Shaders/RWTBase.vsh; sourceTree = "<group>"; };
+		8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTBase.fsh; path = Shaders/RWTBase.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +133,10 @@
 				8036D80F18DFB30100D90FF5 /* Images.xcassets */,
 				8036D83218DFB51C00D90FF5 /* RWTViewController.h */,
 				8036D83318DFB51C00D90FF5 /* RWTViewController.m */,
+				8036D83518DFB9A200D90FF5 /* RWTBaseShader.h */,
+				8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */,
+				8036D83818DFBE7100D90FF5 /* RWTBase.vsh */,
+				8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
 			path = RWTPixelShader;
@@ -236,6 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8036D83B18DFBEB000D90FF5 /* RWTBase.fsh in Resources */,
+				8036D83918DFBE8C00D90FF5 /* RWTBase.vsh in Resources */,
 				8036D82D18DFB35C00D90FF5 /* Main.storyboard in Resources */,
 				8036D80818DFB30000D90FF5 /* InfoPlist.strings in Resources */,
 				8036D81018DFB30100D90FF5 /* Images.xcassets in Resources */,
@@ -258,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8036D83418DFB51C00D90FF5 /* RWTViewController.m in Sources */,
+				8036D83718DFB9A200D90FF5 /* RWTBaseShader.m in Sources */,
 				8036D80E18DFB30000D90FF5 /* RWTAppDelegate.m in Sources */,
 				8036D80A18DFB30000D90FF5 /* main.m in Sources */,
 			);
