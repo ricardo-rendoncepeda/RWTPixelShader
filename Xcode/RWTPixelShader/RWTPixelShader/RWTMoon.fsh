@@ -16,22 +16,25 @@ uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
 uniform float uTime;
 
+// Constants
+const vec2 cCenter = vec2(.5, .5);
+const float cRadius = .5;
+const vec3 cLight = normalize(vec3(.5, .5, 1.));
+
 float sphereDiffuse(void) {
-  vec2 position = gl_FragCoord.xy/uResolution - vec2(.5, .5);
+  vec2 position = gl_FragCoord.xy/uResolution - cCenter;
   position = vec2(uProjectionMatrix * vec4(position, 0.0, 1.0));
   
-  if (length(position) > .5) {
+  if (length(position) > cRadius) {
     discard;
   }
   
-  float r = .5;
   float x = position.x;
   float y = position.y;
-  float z = sqrt(r*r - x*x - y*y);
+  float z = sqrt(cRadius*cRadius - x*x - y*y);
   
   vec3 normal = normalize(vec3(x, y, z));
-  vec3 light = normalize(vec3(.5, .5, 1.));
-  float diffuse = max(dot(normal, light), 0.);
+  float diffuse = max(dot(normal, cLight), 0.);
   
   return diffuse;
 }

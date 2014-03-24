@@ -25,19 +25,19 @@ float noise(vec2 p) {
 }
 
 vec2 sw(vec2 p) {
-  return vec2( floor(p.x) , floor(p.y) );
+  return vec2(floor(p.x), floor(p.y));
 }
 
 vec2 se(vec2 p) {
-  return vec2( ceil(p.x)  , floor(p.y) );
+  return vec2(ceil(p.x), floor(p.y));
 }
 
 vec2 nw(vec2 p) {
-  return vec2( floor(p.x) , ceil(p.y)  );
+  return vec2(floor(p.x), ceil(p.y));
 }
 
 vec2 ne(vec2 p) {
-  return vec2( ceil(p.x)  , ceil(p.y)  );
+  return vec2(ceil(p.x), ceil(p.y));
 }
 
 float smoothNoise(vec2 p) {
