@@ -36,13 +36,6 @@ static GLfloat const RWTBaseShaderQuad[8] = {
 - (instancetype)initWithVertexShader:(NSString *)vsh fragmentShader:(NSString *)fsh {
   self = [super init];
   if (self) {
-    if (!vsh) {
-      vsh = @"RWTBase";
-    }
-    if (!fsh) {
-      fsh = @"RWTBase";
-    }
-    
     // Program
     _program = [self programWithVertexShader:vsh fragmentShader:fsh];
     

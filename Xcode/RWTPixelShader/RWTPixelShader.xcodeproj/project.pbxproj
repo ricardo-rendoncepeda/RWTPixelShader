@@ -486,6 +486,7 @@
 				8036D82818DFB30100D90FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8036D82918DFB30100D90FF5 /* Build configuration list for PBXNativeTarget "RWTPixelShaderTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				8036D82B18DFB30100D90FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
