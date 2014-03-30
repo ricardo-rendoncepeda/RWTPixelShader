@@ -22,7 +22,7 @@ const vec3 cLight = normalize(vec3(.5, .5, 1.));
 
 void main(void) {
   vec2 position = gl_FragCoord.xy/uResolution - cCenter;
-  position = vec2(uProjectionMatrix * vec4(position, 0.0, 1.0));
+  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
   
   if (length(position) > cRadius) {
     discard;

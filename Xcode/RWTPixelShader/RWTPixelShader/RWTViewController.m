@@ -30,7 +30,7 @@
   glkView.context = context;
   
   // OpenGL ES settings
-  glClearColor(.16f, .0f, .22f, 1.f);
+  glClearColor(.16f, 0.f, .22f, 1.f);
   
   // Initialize shader
   self.shader = [[RWTBaseShader alloc] initWithVertexShader:@"RWTBase" fragmentShader:@"RWTMoon"];

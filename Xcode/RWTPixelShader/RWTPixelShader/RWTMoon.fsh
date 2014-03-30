@@ -23,7 +23,7 @@ const vec3 cLight = normalize(vec3(.5, .5, 1.));
 
 float sphereDiffuse(void) {
   vec2 position = gl_FragCoord.xy/uResolution - cCenter;
-  position = vec2(uProjectionMatrix * vec4(position, 0.0, 1.0));
+  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
   
   if (length(position) > cRadius) {
     discard;
@@ -72,7 +72,7 @@ float smoothNoise(vec2 p) {
 }
 
 float movingNoise(vec2 p) {
-  float total = 0.0;
+  float total = 0.;
   total += smoothNoise(p     - uTime);
   total += smoothNoise(p*2.  + uTime) / 2.;
   total += smoothNoise(p*4.  - uTime) / 4.;
@@ -84,7 +84,7 @@ float movingNoise(vec2 p) {
 
 float noiseBrightness(void) {
   vec2 position = gl_FragCoord.xy/uResolution * 5.;
-  position = vec2(uProjectionMatrix * vec4(position, 0.0, 1.0));
+  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
   
   float brightness = movingNoise(position);
   
