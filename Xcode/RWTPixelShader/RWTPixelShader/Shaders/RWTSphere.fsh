@@ -14,7 +14,6 @@ precision highp float;
 // Uniforms
 uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
-uniform float uTime;
 
 // Constants
 const vec2 cCenter = vec2(.5, .5);
