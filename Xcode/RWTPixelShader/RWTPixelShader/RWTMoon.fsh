@@ -12,32 +12,11 @@
 precision highp float;
 
 // Uniforms
-uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
 uniform float uTime;
 
 // Constants
-const vec2 cCenter = vec2(.5, .5);
-const float cRadius = .5;
 const vec3 cLight = normalize(vec3(.5, .5, 1.));
-
-float sphereDiffuse(void) {
-  vec2 position = gl_FragCoord.xy/uResolution - cCenter;
-  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
-  
-  if (length(position) > cRadius) {
-    discard;
-  }
-  
-  float x = position.x;
-  float y = position.y;
-  float z = sqrt(cRadius*cRadius - x*x - y*y);
-  
-  vec3 normal = normalize(vec3(x, y, z));
-  float diffuse = max(dot(normal, cLight), 0.);
-  
-  return diffuse;
-}
 
 float random(float p) {
   return fract(sin(p)*10000.);
@@ -82,18 +61,24 @@ float movingNoise(vec2 p) {
   return total;
 }
 
-float noiseBrightness(void) {
-  vec2 position = gl_FragCoord.xy/uResolution * 5.;
-  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
+void main(void)
+{
+  vec2 center = vec2(uResolution.x/2., uResolution.y/2.);
+  float radius = uResolution.x/2.;
+  vec2 position = gl_FragCoord.xy - center;
   
-  float brightness = movingNoise(position);
+  if (length(position) > radius) {
+    discard;
+  }
   
-  return brightness;
-}
-
-void main(void) {
-  float diffuse = sphereDiffuse();
-  float brightness = noiseBrightness();
+  float x = position.x;
+  float y = position.y;
+  float z = sqrt(radius*radius - x*x - y*y);
+  
+  vec3 normal = normalize(vec3(x, y, z));
+  float diffuse = max(dot(normal, cLight), 0.);
+  
+  float brightness = movingNoise(position/radius*2.);
   
   gl_FragColor = vec4(vec3(diffuse*brightness), 1.);
 }

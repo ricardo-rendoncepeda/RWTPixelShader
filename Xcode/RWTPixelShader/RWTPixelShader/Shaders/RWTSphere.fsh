@@ -12,25 +12,23 @@
 precision highp float;
 
 // Uniforms
-uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
 
 // Constants
-const vec2 cCenter = vec2(.5, .5);
-const float cRadius = .5;
 const vec3 cLight = normalize(vec3(.5, .5, 1.));
 
 void main(void) {
-  vec2 position = gl_FragCoord.xy/uResolution - cCenter;
-  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
+  vec2 center = vec2(uResolution.x/2., uResolution.y/2.);
+  float radius = uResolution.x/2.;
+  vec2 position = gl_FragCoord.xy - center;
   
-  if (length(position) > cRadius) {
+  if (length(position) > radius) {
     discard;
   }
   
   float x = position.x;
   float y = position.y;
-  float z = sqrt(cRadius*cRadius - x*x - y*y);
+  float z = sqrt(radius*radius - x*x - y*y);
   
   vec3 normal = normalize(vec3(x, y, z));
   float diffuse = max(dot(normal, cLight), 0.);

@@ -12,7 +12,6 @@
 precision highp float;
 
 // Uniforms
-uniform mat4 uProjectionMatrix;
 uniform vec2 uResolution;
 uniform float uTime;
 
@@ -60,8 +59,7 @@ float movingNoise(vec2 p) {
 }
 
 void main() {
-  vec2 position = gl_FragCoord.xy/uResolution * 5.;
-  position = vec2(uProjectionMatrix * vec4(position, 0., 1.));
+  vec2 position = gl_FragCoord.xy/uResolution.x * 5.;
   
   float brightness = movingNoise(position);
   gl_FragColor.rgb = vec3(brightness);
