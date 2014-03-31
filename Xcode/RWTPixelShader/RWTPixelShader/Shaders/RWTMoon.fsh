@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 RayWenderlich. All rights reserved.
 //
 
-// FRAGMENT SHADER
-
 // Precision
 precision highp float;
 

@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 RayWenderlich. All rights reserved.
 //
 
-// FRAGMENT SHADER
-
 // Precision
 precision highp float;
 
@@ -16,8 +14,6 @@ uniform vec2 uResolution;
 
 void main(void) {
   vec2 position = gl_FragCoord.xy/uResolution;
-  
-  float brightness = (position.x+position.y)/2.;
-  
-  gl_FragColor = vec4(vec3(brightness), 1.);
+  float gradient = (position.x+position.y)/2.;
+  gl_FragColor = vec4(0., gradient, 0., 1.);
 }

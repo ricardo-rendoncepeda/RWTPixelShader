@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8016B14418E92EC700F21E80 /* RWTMoon.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8016B14318E92EB000F21E80 /* RWTMoon.fsh */; };
 		8036D7FE18DFB30000D90FF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D7FD18DFB30000D90FF5 /* Foundation.framework */; };
 		8036D80018DFB30000D90FF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D7FF18DFB30000D90FF5 /* CoreGraphics.framework */; };
 		8036D80218DFB30000D90FF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8036D80118DFB30000D90FF5 /* UIKit.framework */; };
@@ -29,7 +30,6 @@
 		8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */; };
 		8036D84018DFCBBD00D90FF5 /* RWTSphere.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */; };
 		8036D84218DFCFD500D90FF5 /* RWTNoise.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */; };
-		8036D84418DFD45300D90FF5 /* RWTMoon.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8016B14318E92EB000F21E80 /* RWTMoon.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTMoon.fsh; path = Shaders/RWTMoon.fsh; sourceTree = "<group>"; };
 		8036D7FA18DFB30000D90FF5 /* RWTPixelShader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RWTPixelShader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8036D7FD18DFB30000D90FF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8036D7FF18DFB30000D90FF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,7 +72,6 @@
 		8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTGradient.fsh; path = Shaders/RWTGradient.fsh; sourceTree = "<group>"; };
 		8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTSphere.fsh; path = Shaders/RWTSphere.fsh; sourceTree = "<group>"; };
 		8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = RWTNoise.fsh; path = Shaders/RWTNoise.fsh; sourceTree = "<group>"; };
-		8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = RWTMoon.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8016B13A18E8FCC300F21E80 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				8036D83818DFBE7100D90FF5 /* RWTBase.vsh */,
+				8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */,
+				8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */,
+				8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */,
+				8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */,
+				8016B14318E92EB000F21E80 /* RWTMoon.fsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
 		8036D7F118DFB30000D90FF5 = {
 			isa = PBXGroup;
 			children = (
@@ -143,12 +156,7 @@
 				8036D83318DFB51C00D90FF5 /* RWTViewController.m */,
 				8036D83518DFB9A200D90FF5 /* RWTBaseShader.h */,
 				8036D83618DFB9A200D90FF5 /* RWTBaseShader.m */,
-				8036D83818DFBE7100D90FF5 /* RWTBase.vsh */,
-				8036D83A18DFBEA800D90FF5 /* RWTBase.fsh */,
-				8036D83D18DFCA4A00D90FF5 /* RWTGradient.fsh */,
-				8036D83F18DFCBAF00D90FF5 /* RWTSphere.fsh */,
-				8036D84118DFCFC500D90FF5 /* RWTNoise.fsh */,
-				8036D84318DFD1F300D90FF5 /* RWTMoon.fsh */,
+				8016B13A18E8FCC300F21E80 /* Shaders */,
 				8036D80418DFB30000D90FF5 /* Supporting Files */,
 			);
 			path = RWTPixelShader;
@@ -259,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8036D84418DFD45300D90FF5 /* RWTMoon.fsh in Resources */,
+				8016B14418E92EC700F21E80 /* RWTMoon.fsh in Resources */,
 				8036D84218DFCFD500D90FF5 /* RWTNoise.fsh in Resources */,
 				8036D84018DFCBBD00D90FF5 /* RWTSphere.fsh in Resources */,
 				8036D83E18DFCA5900D90FF5 /* RWTGradient.fsh in Resources */,

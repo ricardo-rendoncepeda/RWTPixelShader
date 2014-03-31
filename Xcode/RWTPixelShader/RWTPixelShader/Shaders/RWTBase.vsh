@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 RayWenderlich. All rights reserved.
 //
 
-// VERTEX SHADER
-
 // Attributes
 attribute vec2 aPosition;
 
