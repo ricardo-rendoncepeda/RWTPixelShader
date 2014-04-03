@@ -24,12 +24,9 @@ void main(void) {
     discard;
   }
   
-  float x = position.x;
-  float y = position.y;
-  float z = sqrt(radius*radius - x*x - y*y);
-  
-  vec3 normal = normalize(vec3(x, y, z));
-  float diffuse = max(dot(normal, cLight), 0.);
+  float z = sqrt(radius*radius - position.x*position.x - position.y*position.y);
+  vec3 normal = normalize(vec3(position.x, position.y, z));
+  float diffuse = max(0., dot(normal, cLight));
   
   gl_FragColor = vec4(vec3(diffuse), 1.);
 }
