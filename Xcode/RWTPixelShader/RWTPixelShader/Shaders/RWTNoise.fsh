@@ -44,6 +44,7 @@ float interpolatedNoise(vec2 p) {
   
   float r1 = mix(q11, q21, inter.x);
   float r2 = mix(q12, q22, inter.x);
+  
   return mix (r1, r2, inter.y);
 }
 

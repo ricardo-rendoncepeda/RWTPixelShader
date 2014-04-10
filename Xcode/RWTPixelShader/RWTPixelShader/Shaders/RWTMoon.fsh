@@ -13,6 +13,9 @@ precision highp float;
 uniform vec2 uResolution;
 uniform float uTime;
 
+// Constants
+const vec3 cLight = normalize(vec3(.5, .5, 1.));
+
 float randomNoise(vec2 p) {
   return fract(6791.*sin(47.*p.x+p.y*9973.));
 }
@@ -48,17 +51,29 @@ float interpolatedNoise(vec2 p) {
   return mix (r1, r2, s.y);
 }
 
+float diffuseSphere(vec2 p, float r) {
+  float z = sqrt(r*r - p.x*p.x - p.y*p.y);
+  vec3 normal = normalize(vec3(p.x, p.y, z));
+  float diffuse = max(0., dot(normal, cLight));
+  return diffuse;
+}
+
 void main(void) {
-  vec2 position = gl_FragCoord.xy/uResolution.xx;
+  vec2 center = vec2(uResolution.x/2., uResolution.y/2.);
+  float radius = uResolution.x/2.;
+  vec2 position = gl_FragCoord.xy - center;
   
-  if ((position.x>1.) || (position.y>1.)) {
+  if (length(position) > radius) {
     discard;
   }
   
-  float tiles = 4.;
-  position *= tiles;
-  position += uTime;
-  float n = interpolatedNoise(position);
+  // Diffuse
+  float diffuse = diffuseSphere(position, radius);
   
-  gl_FragColor = vec4(vec3(n), 1.);
+  // Noise
+  position /= radius;
+  position += uTime;
+  float noise = interpolatedNoise(position);
+  
+  gl_FragColor = vec4(vec3(diffuse*noise), 1.);
 }
