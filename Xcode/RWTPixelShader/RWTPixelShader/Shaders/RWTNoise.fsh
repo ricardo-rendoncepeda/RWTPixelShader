@@ -55,7 +55,7 @@ void main(void) {
     discard;
   }
   
-  float tiles = 4.
+  float tiles = 4.;
   position *= tiles;
   position += uTime;
   float n = interpolatedNoise(position);
